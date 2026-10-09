@@ -1,27 +1,55 @@
-#container {
-  text-align: center;
+// #container {
+//   text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+//   position: absolute;
+//   left: 0;
+//   right: 0;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+
+// #container strong {
+//   font-size: 20px;
+//   line-height: 26px;
+// }
+
+// #container p {
+//   font-size: 16px;
+//   line-height: 22px;
+
+//   color: #8c8c8c;
+
+//   margin: 0;
+// }
+
+// #container a {
+//   text-decoration: none;
+// }
+
+ion-button img {
+  width: 50px;   /* Standard Ionic icon width */
+  height: 50px;  /* Standard Ionic icon height */
+  object-fit: contain; /* Ensures the image doesn't distort */
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+/* Target the logo container inside the title to force perfect alignment */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+/* Ensure the British Airways image doesn't blow out the toolbar height */
+.logo-container img {
+  height: 32px;        /* Standard header logo height */
+  width: auto;         /* Maintains proper aspect ratio */
+  object-fit: contain;
 }
 
-#container a {
-  text-decoration: none;
+/* Constrain the Oneworld image on the right as well */
+ion-buttons[slot="end"] img {
+  height: 24px;
+  width: auto;
 }
+
