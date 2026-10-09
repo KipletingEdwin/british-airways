@@ -1,0 +1,7 @@
+{
+  "name": "british-airways",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
