@@ -11,13 +11,13 @@
 
     <ion-title>
       <div class="ion-text-center logo-container">
-        <img src="../../assets/britishairways.jpg" alt="British Airways"/>
+        <img src="../../assets/britishairways.jpg" alt="British Airways" />
       </div>
     </ion-title>
 
     <ion-buttons slot="end">
-      <ion-button fill="outline" >Login</ion-button>
-      <ion-button fill="clear"><img src="../../assets/Oneworld-Logo.png" alt="Oneworld"/></ion-button>
+      <ion-button fill="outline">Login</ion-button>
+      <ion-button fill="clear"><img src="../../assets/Oneworld-Logo.png" alt="Oneworld" /></ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -28,13 +28,80 @@
   <ion-grid>
     <ion-row>
       <ion-col>
-        <ion-button fill="outline"><ion-icon name="airplane-outline" ></ion-icon>Flights</ion-button>
-        <ion-button fill="outline"><ion-icon name="swap-horizontal-outline" ></ion-icon>Multi-city</ion-button>
-        <ion-button fill="outline"><ion-icon name="arrow-forward-outline" slot="end" ></ion-icon>British Airways Holidays</ion-button>
-
+        <ion-button fill="outline"><ion-icon name="airplane-outline"></ion-icon>Flights</ion-button>
+        <ion-button fill="outline"><ion-icon name="swap-horizontal-outline"></ion-icon>Multi-city</ion-button>
+        <ion-button fill="outline"><ion-icon name="arrow-forward-outline" slot="end"></ion-icon>British Airways
+          Holidays</ion-button>
       </ion-col>
     </ion-row>
 
-  </ion-grid>
+    <div>
+      <ion-row>
+        <ion-col size="12" sizeMd="2">
+          <ion-item>
+            <ion-label position="stacked">Trip Type</ion-label>
+            <ion-select interface="popover" value="return">
+              <ion-select-option value="return">Return trip</ion-select-option>
+              <ion-select-option value="oneway">One way</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
 
+        <ion-col size="12" sizeMd="5">
+          <ion-item lines="none">
+            <ion-label position="stacked">From</ion-label>
+            <ion-input placeholder="Departure City"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" sizeMd="5">
+          <ion-item lines="none">
+            <ion-label position="stacked">To</ion-label>
+            <ion-input placeholder="Where can we take you?"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col size="12" sizeSm="6" sizeMd="3">
+          <ion-item>
+            <ion-label position="stacked">Depart</ion-label>
+            <ion-input type="date"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" sizeSm="6" sizeMd="3">
+          <ion-item>
+            <ion-label position="stacked">Return</ion-label>
+            <ion-input type="date"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="12" sizeSm="6" sizeMd="3">
+          <ion-item>
+            <ion-label position="stacked">Travel class</ion-label>
+            <ion-select interface="popover">
+              <ion-select-option value="economy">Economy</ion-select-option>
+              <ion-select-option value="business">Business</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+                <ion-col size="12" sizeSm="6" sizeMd="3">
+          <ion-item>
+            <ion-label position="stacked">Select passengers</ion-label>
+            <ion-select interface="popover">
+              <ion-select-option value="economy">Economy</ion-select-option>
+              <ion-select-option value="business">Business</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </ion-col>
+
+
+
+      </ion-row>
+
+
+    </div>
+  </ion-grid>
 </ion-content>
