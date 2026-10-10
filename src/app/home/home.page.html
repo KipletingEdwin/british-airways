@@ -24,7 +24,7 @@
 
 
 <ion-content></ion-content>
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="primary" >
   <ion-grid>
     <ion-row>
       <ion-col>
@@ -80,25 +80,21 @@
         <ion-col size="12" sizeSm="6" sizeMd="3">
           <ion-item>
             <ion-label position="stacked">Travel class</ion-label>
-            <ion-select interface="popover">
+            <ion-select interface="popover" value="economy" >
               <ion-select-option value="economy">Economy</ion-select-option>
               <ion-select-option value="business">Business</ion-select-option>
             </ion-select>
           </ion-item>
         </ion-col>
 
-                <ion-col size="12" sizeSm="6" sizeMd="3">
+        <ion-col size="12" sizeSm="6" sizeMd="3">
           <ion-item>
             <ion-label position="stacked">Select passengers</ion-label>
-            <ion-select interface="popover">
-              <ion-select-option value="economy">Economy</ion-select-option>
-              <ion-select-option value="business">Business</ion-select-option>
-            </ion-select>
+            <ion-text class="selected-text">{{  }}</ion-text>
+            
+
           </ion-item>
         </ion-col>
-
-
-
       </ion-row>
 
 
