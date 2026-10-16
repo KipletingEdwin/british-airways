@@ -2,7 +2,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
     <ion-buttons slot="start">
-      <ion-button>Discover</ion-button>
+      <ion-button [routerLink]="['/discover']" >Discover</ion-button>
       <ion-button>Book</ion-button>
       <ion-button>Manage</ion-button>
       <ion-button>Help</ion-button>
@@ -16,7 +16,7 @@
     </ion-title>
 
     <ion-buttons slot="end">
-      <ion-button fill="outline">Login</ion-button>
+      <ion-button fill="outline" [routerLink]="['/login']" >Login</ion-button>
       <ion-button fill="clear"><img src="../../assets/Oneworld-Logo.png" alt="Oneworld" /></ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -87,17 +87,61 @@
           </ion-item>
         </ion-col>
 
-        <ion-col size="12" sizeSm="6" sizeMd="3">
+        <ion-col>
           <ion-item>
-            <ion-label position="stacked">Select passengers</ion-label>
-            <ion-text class="selected-text">{{  }}</ion-text>
-            
-
+            <ion-label>Select Passengers</ion-label>
           </ion-item>
         </ion-col>
+
+
+
+        <!-- <ion-col size="12" sizeSm="6" sizeMd="3">
+          <ion-item>
+            <ion-label position="stacked">Select passengers</ion-label>
+            <ion-text class="selected-text">{{getPassengerSummary()}}</ion-text>
+          </ion-item>
+          <ion-popover trigger="open-passenger-popover" dismissOnSelect="false" interface="popover">
+            <ng-template>
+              <ion-content>
+                <h3>Who are yiu travelling with?</h3>
+                 <div>
+                  <div>
+                    <span>Adults</span>
+                    <span>16+ years</span>
+                  </div>
+                  <div>
+                    <ion-button>
+                      <ion-icon name="remove-circle-outline" ></ion-icon>
+                    </ion-button>
+                    <span>{{ passengers.adults }}</span>
+                    <ion-button>
+                      <ion-icon name="add-circle-outline" ></ion-icon>
+                    </ion-button>
+                  </div>
+                 </div>
+                 <div>
+                  <div>
+                    <span>Young Adults</span>
+                    <span>12-15 years</span>
+                  </div>
+                  <div>
+                    <ion-button>
+                      <ion-icon name="remove-circle-outline" ></ion-icon>
+                    </ion-button>
+                    <span>{{ passengers.adults }}</span>
+                    <ion-button>
+                      <ion-icon name="add-circle-outline" ></ion-icon>
+                    </ion-button>
+                  </div>
+                 </div>
+              </ion-content>
+            </ng-template>
+          </ion-popover>
+        </ion-col> -->
+
+
+
       </ion-row>
-
-
     </div>
   </ion-grid>
 </ion-content>

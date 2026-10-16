@@ -14,24 +14,32 @@ const routes: Routes = [
   },
   {
     path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+    loadChildren: () => import('./pages/tabs/tabs.module').then( m => m.TabsPageModule)
   },
   {
     path: 'book',
-    loadChildren: () => import('./book/book.module').then( m => m.BookPageModule)
+    loadChildren: () => import('./pages/book/book.module').then( m => m.BookPageModule)
   },
   {
     path: 'manage',
-    loadChildren: () => import('./manage/manage.module').then( m => m.ManagePageModule)
+    loadChildren: () => import('./pages/manage/manage.module').then( m => m.ManagePageModule)
   },
   {
     path: 'status',
-    loadChildren: () => import('./status/status.module').then( m => m.StatusPageModule)
+    loadChildren: () => import('./pages/status/status.module').then( m => m.StatusPageModule)
   },
   {
     path: 'account',
-    loadChildren: () => import('./account/account.module').then( m => m.AccountPageModule)
+    loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule)
   },
+  {
+    path: 'discover',
+    loadChildren: () => import('./pages/discover/discover.module').then( m => m.DiscoverPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  }
 ];
 
 @NgModule({
