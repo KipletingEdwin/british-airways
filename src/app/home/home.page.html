@@ -5,19 +5,21 @@
       <ion-button 
       [routerLink]="['/discover']" 
       id="discover-trigger"
-      (mouseenter)="openPopover($event)"
+      (mouseenter)="openPopover()"
       (mouseleave)="closePopover()"
-      >Discover</ion-button>
+      >Discover
+      </ion-button>
 
-      
+
       <ion-popover
       trigger="discover-trigger"
-      triggerAction="hover"
       [isOpen]="isPopoverOpen"
       (ionPopoverDidDismiss)="isPopoverOpen = false"
       side="bottom"
       alignment="start"
       class="hover-menu"
+      (mouseenter)="openPopover()"
+      (mouseleave)="closePopover()"
       >
         <ng-template>
           <ion-content class="ion-padding">
