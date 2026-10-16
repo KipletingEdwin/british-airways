@@ -55,4 +55,19 @@ export class HomePage {
 
     return summaryParts.join(', ');
   }
+
+  isPopoverOpen = false;
+
+  openPopover(event: MouseEvent) {
+    this.isPopoverOpen = true;
+  }
+
+  closePopover() {
+    setTimeout(() => {
+      this.isPopoverOpen = false;
+    }, 100);
+  }
+
+
+
 }

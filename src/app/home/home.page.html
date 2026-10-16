@@ -2,7 +2,36 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="secondary">
     <ion-buttons slot="start">
-      <ion-button [routerLink]="['/discover']" >Discover</ion-button>
+      <ion-button 
+      [routerLink]="['/discover']" 
+      id="discover-trigger"
+      (mouseenter)="openPopover($event)"
+      (mouseleave)="closePopover()"
+      >Discover</ion-button>
+
+      
+      <ion-popover
+      trigger="discover-trigger"
+      triggerAction="hover"
+      [isOpen]="isPopoverOpen"
+      (ionPopoverDidDismiss)="isPopoverOpen = false"
+      side="bottom"
+      alignment="start"
+      class="hover-menu"
+      >
+        <ng-template>
+          <ion-content class="ion-padding">
+            <h3>Explore categories</h3>
+            <p>This whole section drops down on hover!</p>
+            <ion-list>
+              <ion-item>Trending Places</ion-item>
+              <ion-item>Hotels and Stays</ion-item>
+              <ion-item>Flights and Logistics</ion-item>
+
+            </ion-list>
+          </ion-content>
+        </ng-template>
+      </ion-popover>
       <ion-button>Book</ion-button>
       <ion-button>Manage</ion-button>
       <ion-button>Help</ion-button>
@@ -16,7 +45,7 @@
     </ion-title>
 
     <ion-buttons slot="end">
-      <ion-button fill="outline" [routerLink]="['/login']" >Login</ion-button>
+      <ion-button fill="outline" [routerLink]="['/login']" style="width: 200px;" >Login</ion-button>
       <ion-button fill="clear"><img src="../../assets/Oneworld-Logo.png" alt="Oneworld" /></ion-button>
     </ion-buttons>
   </ion-toolbar>
